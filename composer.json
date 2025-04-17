@@ -1,0 +1,14 @@
+{
+    "name": "cmontt/std-json-response",
+    "description": "Paquete para estandarizar respuestas JSON en Laravel",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "StdJsonResponse\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0"
+    },
+    "license": "MIT"
+}

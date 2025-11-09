@@ -1,27 +1,30 @@
 <?php
-namespace StdJsonResponse;
 
-use Illuminate\Http\JsonResponse;
+namespace StdJsonResponse;
 
 class JSONResponse
 {
-    public static function success(StdResponse $response, int $code = 200): JsonResponse
+    public static function success(StdResponse $response): void
     {
-        return response()->json([
+        $dato = [
             'status' => true,
             'message' => $response->message,
             'data' => $response->data,
             'error' => null
-        ], $code);
+        ];
+
+        echo json_encode($dato);
     }
 
-    public static function error(StdResponse $response, int $code = 400): JsonResponse
+    public static function error(StdResponse $response): void
     {
-        return response()->json([
+        $dato = [
             'status' => false,
             'message' => $response->message,
             'data' => null,
             'error' => $response->error
-        ], $code);
+        ];
+
+        echo json_encode($dato);
     }
 }

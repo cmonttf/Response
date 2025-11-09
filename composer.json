@@ -1,5 +1,5 @@
 {
-    "name": "cmontt/std-json-response",
+    "name": "cmonttf/response",
     "description": "Paquete para estandarizar respuestas JSON en Laravel",
     "type": "library",
     "autoload": {
@@ -10,5 +10,7 @@
     "require": {
         "php": "^8.0"
     },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "license": "MIT"
 }
